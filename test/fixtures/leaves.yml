@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Hello World
+  description: The first leaf ever!
+
+two:
+  name: Another World
+  description: Whoa! And the second one just like that!
