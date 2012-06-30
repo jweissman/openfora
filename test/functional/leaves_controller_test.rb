@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LeavesControllerTest < ActionController::TestCase
   setup do
-    @leaf = leaves(:one)
+    @leaf = leaves(:alpha)
   end
 
   test "should get index" do
@@ -15,13 +15,18 @@ class LeavesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
-
+  
   test "should create leaf" do
     assert_difference('Leaf.count') do
-      post :create, leaf: { description: @leaf.description, name: @leaf.name }
-    end
+      post :create, leaf: { 
+        description: @leaf.description, 
+        name: 'blah', # @leaf.name, 
+        type: @leaf.type
+      } 
+    end   
 
-    assert_redirected_to leaf_path(assigns(:leaf))
+
+    assert_redirected_to polymorphic_path(assigns(:leaf))
   end
 
   test "should show leaf" do
@@ -36,7 +41,7 @@ class LeavesControllerTest < ActionController::TestCase
 
   test "should update leaf" do
     put :update, id: @leaf, leaf: { description: @leaf.description, name: @leaf.name }
-    assert_redirected_to leaf_path(assigns(:leaf))
+    assert_redirected_to leaves_path(assigns(:leaf))
   end
 
   test "should destroy leaf" do

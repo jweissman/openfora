@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: Hello World
+alpha:
+  name: alpha
   description: The first leaf ever!
+  type: ForumLeaf
 
-two:
-  name: Another World
+beta:
+  name: beta
   description: Whoa! And the second one just like that!
+  type: StackLeaf
+
+# three:
+#   name: Hello Aggregator!
+#   description: Oh yeah! Now wes got three!
+

@@ -10,4 +10,12 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  # routing help
+  include ActionDispatch::Routing::UrlFor
+  include Rails.application.routes.url_helpers
+
+  # and default host
+  default_url_options[:host] = 'www.example.com'
+
 end

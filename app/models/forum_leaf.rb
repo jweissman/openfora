@@ -1,4 +1,5 @@
 class ForumLeaf < Leaf
+  # def self.model_name() Leaf.model_name end
 
 # I need to have chat rooms and discussion items
 # And voting and aggregation
