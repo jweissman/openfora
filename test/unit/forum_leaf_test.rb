@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LeafTest < ActiveSupport::TestCase
+class ForumLeafTest < ActiveSupport::TestCase
   test "the truth" do
     assert true
   end
