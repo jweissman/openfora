@@ -4,6 +4,8 @@ Openfora::Application.routes.draw do
 
   resources :leaves
 
+  root :to => 'leaves#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
