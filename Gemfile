@@ -30,12 +30,14 @@ group :test, :development do
 
   gem 'database_cleaner'
 
+
   #
 	# => support
 	#
 
   gem 'growl'
   gem 'spork'
+  gem 'powder'
 
   #
   #   guard

@@ -1,4 +1,5 @@
 class Leaf < ActiveRecord::Base
+  belongs_to :branch, :validate => true
   attr_accessible :name, :description, :type, :created_at
 
   # validates :name, :presence => true
