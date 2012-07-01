@@ -56,11 +56,12 @@ class LeavesController < ApplicationController
   # PUT /leaves/1
   # PUT /leaves/1.json
   def update
-    @leaf = Leaf.find(params[:id])
-    
+    @leaf = Leaf.find(params[:id]).becomes(Leaf)
+
+
     respond_to do |format|
       if @leaf.update_attributes(params[:leaf])
-        format.html { redirect_to @leaf.becomes(Leaf), notice: 'Leaf was successfully updated.' }
+        format.html { redirect_to @leaf, notice: 'Leaf was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
