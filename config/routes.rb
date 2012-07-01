@@ -1,4 +1,5 @@
 Openfora::Application.routes.draw do
+
   resources :leaves
 
   # The priority is based upon order of creation:
