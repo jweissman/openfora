@@ -34,4 +34,22 @@ Openfora::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+
+
+  #
+  # => LiveReload setup
+  #
+  config.middleware.insert_before(Rack::Lock, Rack::LiveReload)
+
+  # ...or, change some options...
+
+  config.middleware.insert_before(
+    Rack::Lock, Rack::LiveReload,
+    :min_delay => 500,
+    :max_delay => 10000,
+    :port => 12345,
+    :host => 'openfora.dev',
+    :ignore => [ %r{dont/modify\.html$} ]
+  )
 end

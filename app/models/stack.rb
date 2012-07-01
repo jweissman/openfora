@@ -4,6 +4,6 @@
 # to permit discussion. But mainly questions and 
 # answers! That's the good stuff.
 #
-class StackLeaf < Leaf
+class Stack < Leaf
   def self.model_name() Leaf.model_name end
 end

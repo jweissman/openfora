@@ -6,12 +6,14 @@ describe "leaves/index" do
       stub_model(Leaf,
         :name => "Name",
         :description => "Description",
-        :type => "Type"
+        :type => "Type",
+        :created_at => Date.new
       ),
       stub_model(Leaf,
         :name => "Name",
         :description => "Description",
-        :type => "Type"
+        :type => "Type",
+        :created_at => Date.new
       )
     ])
   end
@@ -22,5 +24,6 @@ describe "leaves/index" do
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Description".to_s, :count => 2
     assert_select "tr>td", :text => "Type".to_s, :count => 2
+    # assert_select "tr>td", :text => "Created at".to_s, :count => 2
   end
 end

@@ -18,17 +18,33 @@ group :test, :development do
   #
   # 	testing frameworks
   #
+
   gem 'capybara'
   gem 'factory_girl_rails'
   gem "rspec-rails", "~> 2.0"
   gem 'cucumber-rails', :require => false  
 
   #
+  # => helpers
+  #
+
+  gem 'database_cleaner'
+
+  #
 	# => support
 	#
+
+  gem 'growl'
   gem 'spork'
-  gem 'watchr'
-  gem 'database_cleaner'
+
+  #
+  #   guard
+  #
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'rack-livereload'
 
 end
 

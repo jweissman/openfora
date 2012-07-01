@@ -1,5 +1,10 @@
 require 'rubygems'
 require 'spork'
+require 'active_record'
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :truncation
+
 # require 'factory_girl'
 
 # uncomment the following line to use spork with the debugger
@@ -48,11 +53,26 @@ Spork.prefork do
     # Sweet factories.
     config.include FactoryGirl::Syntax::Methods
 
+    # Cleanup
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
+
   end
 
 end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
+  DatabaseCleaner.clean
 
 end

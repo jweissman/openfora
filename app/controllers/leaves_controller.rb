@@ -58,7 +58,6 @@ class LeavesController < ApplicationController
   def update
     @leaf = Leaf.find(params[:id])
     respond_to do |format|
-      debugger
       if @leaf.update_attributes(params[:leaf])
         format.html { redirect_to @leaf, notice: 'Leaf was successfully updated.' }
         format.json { head :no_content }
