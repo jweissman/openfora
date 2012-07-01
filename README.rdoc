@@ -1,8 +1,17 @@
 https://secure.travis-ci.org/jweissman1986/openfora.png
 
+{<img src="https://secure.travis-ci.org/jweissman1986/openfora.png" />}[https://secure.travis-ci.org/jweissman1986/openfora]
+
+
 == Welcome to openFora
 
-[TODO]
+The idea behind openFora is to leverage some of the larger-scale webapp 'patterns' (blogs, q&a stacks, forums, aggregators) as components in a larger system. 
+
+TODO: 
+  branch/admin/leaves
+  cucumber/setup
+  travis/setup          
+
 
 == Getting Started
 
