@@ -44,7 +44,7 @@ class LeavesController < ApplicationController
 
     respond_to do |format|
       if @leaf.save
-        format.html { redirect_to @leaf, notice: 'Leaf was successfully created!' }
+        format.html { redirect_to @leaf, notice: 'Leaf was successfully created.' }
         format.json { render json: @leaf, status: :created, location: @leaf }
       else
         format.html { render action: "new" }
@@ -56,10 +56,9 @@ class LeavesController < ApplicationController
   # PUT /leaves/1
   # PUT /leaves/1.json
   def update
-    @leaf = Leaf.find(params[:id]).becomes(Leaf)
-
-
+    @leaf = Leaf.find(params[:id])
     respond_to do |format|
+      debugger
       if @leaf.update_attributes(params[:leaf])
         format.html { redirect_to @leaf, notice: 'Leaf was successfully updated.' }
         format.json { head :no_content }

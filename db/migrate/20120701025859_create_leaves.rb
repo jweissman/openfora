@@ -3,6 +3,7 @@ class CreateLeaves < ActiveRecord::Migration
     create_table :leaves do |t|
       t.string :name
       t.string :description
+      t.string :type
 
       t.timestamps
     end
