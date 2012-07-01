@@ -10,6 +10,11 @@ gem 'sqlite3'
 # ?
 gem 'i18n', '0.6.0'
 
+group :test, :development do
+  gem 'spork'
+  gem 'spork-testunit'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
