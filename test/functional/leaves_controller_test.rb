@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class LeavesControllerTest < ActionController::TestCase
+
   setup do
     @leaf = leaves(:alpha)
   end
@@ -41,7 +42,7 @@ class LeavesControllerTest < ActionController::TestCase
 
   test "should update leaf" do
     put :update, id: @leaf, leaf: { description: @leaf.description, name: @leaf.name }
-    assert_redirected_to leaves_path(assigns(:leaf))
+    assert_redirected_to polymorphic_path(@leaf.becomes(Leaf))
   end
 
   test "should destroy leaf" do
