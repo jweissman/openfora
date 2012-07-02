@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120701212646) do
+ActiveRecord::Schema.define(:version => 20120702042638) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(:version => 20120701212646) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "branch_id"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.integer  "leaf_id"
+    t.integer  "parent_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

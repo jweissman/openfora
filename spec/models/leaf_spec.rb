@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+# describe Leaf
+
 describe Leaf, "#subclasses" do
   it "should create each of its subtypes" do
   	Leaf.subclasses.each do |subclass|	

@@ -37,6 +37,7 @@ group :test, :development do
 
   gem 'growl'
   gem 'spork'
+  
   gem 'powder'
 
   #
@@ -68,6 +69,12 @@ end
 #
 #   global requirements
 #
+
+# tree
+gem 'acts_as_tree'
+
+
+# js
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

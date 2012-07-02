@@ -1,5 +1,7 @@
 Openfora::Application.routes.draw do
 
+  resources :posts
+
   resources :branches
 
   resources :leaves
